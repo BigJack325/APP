@@ -12,7 +12,7 @@ int signe(int n)
 float exponentielle( float x, int n)
 {
 	float reponse2=1,i;
-	for(i=1; i<=(2*n-1);i++)
+	for(i=1; i<=(2*n-2);i++)
 	{
 		reponse2 = reponse2*x;
 	}
@@ -22,17 +22,17 @@ float exponentielle( float x, int n)
 int factorielle(int n)
 {
 	int reponse3=1,i;
-	for(i=1; i<=(2*n-1);i++)
+	for(i=1; i<=(2*n-2);i++)
 	{
 		reponse3 = reponse3*i;
 	}
 	return reponse3;
 }
-float sinus(float x)
+float cosinus(float x)
 {
 	const int n=5;
 	float resultat=0;
-	for(int i=1; i<=n;i++) 
+	for(int i=1; i<=n;i++)
 	{
 		int reponse1 = signe(i);
 		float reponse2 = exponentielle(x,i);
@@ -45,10 +45,10 @@ float sinus(float x)
 int main()
 {
 	float x = 1.0;
-	float resultat=sinus(x);
+	float resultat=cosinus(x);
 	printf("La valeur en radian testé est: %f\n",x);
-	printf("La valeur du sinus théorique est: 0.8415\n");
-	printf("La valeur du sinus calculée est: %f",resultat);
+	printf("La valeur du cosinus théorique est: 0.5403\n");
+	printf("La valeur du cosinus calculée est: %f",resultat);
 	
 	return 0;
 }
