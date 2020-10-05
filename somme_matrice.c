@@ -1,13 +1,13 @@
 #include <stdio.h>
-#define n 2
-#define m 3
+#define c 2
+#define r 3
 
-int somme(int matriceA[m][n], int matriceB[m][n],int matriceR[m][n])
+int somme(int matriceA[r][c], int matriceB[r][c],int matriceR[r][c])
 {
 	int somme;
-	for(int i=0;i<m;i++) 
+	for(int i=0;i<r;i++) 
 	{
-		for(int j=0;j<n;j++)
+		for(int j=0;j<c;j++)
 		{
 			somme= matriceA[i][j]+matriceB[i][j];
 			matriceR[i][j]=somme;
@@ -19,32 +19,32 @@ int somme(int matriceA[m][n], int matriceB[m][n],int matriceR[m][n])
 }
 int main()
 {
-	int matriceA[m][n] = {{1,2},{3,4},{5,6}};
-	int matriceB[m][n] = {{6,5},{4,3},{2,1}};
-	int matriceR[m][n] = {{0,0},{0,0},{0,0}};
+	int matriceA[r][c] = {{1,2},{3,4},{5,6}};
+	int matriceB[r][c] = {{6,5},{4,3},{2,1}};
+	int matriceR[r][c] = {{0,0},{0,0},{0,0}};
 	somme(matriceA,matriceB,matriceR);
 	printf("MatriceA:\n");
-	for(int i=0;i<n;i++) 
+	for(int i=0;i<r;i++) 
 	{
-		for(int j=0;j<n;j++)
+		for(int j=0;j<c;j++)
 		{
 			printf("%d\t",matriceA[i][j]);
 		}
 		printf("\n");
 	}
 	printf("MatriceB:\n");
-	for(int i=0;i<n;i++) 
+	for(int i=0;i<r;i++) 
 	{
-		for(int j=0;j<n;j++)
+		for(int j=0;j<c;j++)
 		{
 			printf("%d\t",matriceB[i][j]);
 		}
 		printf("\n");
 	}
 	printf("Matrice Résultante:\n");
-	for(int i=0;i<n;i++) 
+	for(int i=0;i<r;i++) 
 	{
-		for(int j=0;j<n;j++)
+		for(int j=0;j<c;j++)
 		{
 			printf("%d\t",matriceR[i][j]);
 		}
