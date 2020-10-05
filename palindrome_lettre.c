@@ -1,7 +1,7 @@
 #include <stdio.h>
 int palindrome(char chaine[])
 {
-	int i,j=0;
+	int i=0,j;
 	while( chaine[i]!='\0')
 	{
 	i++;
