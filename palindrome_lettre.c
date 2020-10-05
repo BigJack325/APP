@@ -1,24 +1,28 @@
 #include <stdio.h>
-
+int palindrome(char chaine[])
+{
+	int i,j=0;
+	while( chaine[i]!='\0')
+	{
+	i++;
+	}
+	j=i-1;
+	for(i=0,j=j;i<=j;i++,j--)
+	{
+		if (chaine[i]!=chaine[j])
+		{
+		return 0;
+		}
+	}
+return 1;
+}
 int main()
 {
-	char mot[21] = {"laval"};
-	int i=1,j=2;
-	if(mot[i]!= mot[j])
-	{
-		j++;
-		
-	if(mot[i]==mot[j])
-	{
-		i++;
-		j--;
-	}
-	if(mot[i]==mot[j])
-		printf("Le mot %s est un palindrome!", mot);
-	else
-		printf("Le mot %s n'est pas un palindrome!", mot);
-	}
-			
-	return 0;
-}
+	char chaine[21] = {"laval"};
+	int reponse = palindrome(chaine);
+	printf("Palindrome = 1 Non-palindrome = 0: %d", reponse);
 
+	return 0;
+
+
+}

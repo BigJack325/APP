@@ -44,12 +44,17 @@ float sinus(float x)
 		
 int main()
 {
-	float x = 1.0;
-	float resultat=sinus(x);
-	printf("La valeur en radian testé est: %f\n",x);
-	printf("La valeur du sinus théorique est: 0.8415\n");
-	printf("La valeur du sinus calculée est: %f",resultat);
-	
+	float x[4] = {1.0,0.0,(3.14/4),(3.14/2)};
+	float theorique[4] = {0.8415,0.0,0.7071,1.0};
+	for(int i=0;i<4;i++)
+	{
+		float resultat=sinus(x[i]);
+		printf("La valeur en radian testé est: %f\n",x[i]);
+		printf("La valeur du sinus théorique est: %f\n",theorique[i]);
+		printf("La valeur du sinus calculée est: %f\n",resultat);
+	}
+
+
 	return 0;
 }
 

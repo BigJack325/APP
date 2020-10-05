@@ -44,11 +44,16 @@ float cosinus(float x)
 		
 int main()
 {
-	float x = 1.0;
-	float resultat=cosinus(x);
-	printf("La valeur en radian testé est: %f\n",x);
-	printf("La valeur du cosinus théorique est: 0.5403\n");
-	printf("La valeur du cosinus calculée est: %f",resultat);
+	float x[4] = {1.0,0.0,(3.14/4),(3.14/2)};
+	float theorique[4] = {0.5403,1.0,0.7071,0.0};
+	for(int i=0;i<4;i++)
+	{
+		float resultat=cosinus(x[i]);
+		printf("La valeur en radian testé est: %f\n",x[i]);
+		printf("La valeur du cosinus théorique est: %f\n",theorique[i]);
+		printf("La valeur du cosinus calculée est: %f\n",resultat);
+	}
+
 	
 	return 0;
 }
