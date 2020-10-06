@@ -1,0 +1,21 @@
+FONCTION mot(chaine,caractere):f
+//i(entier):nombre à additionner
+//f(entier):-1 ou la case du tableau de la chaine
+//chaine(tableau de chaine de lettre): chaine de mot à analyser
+//caractere(tableau de lettre): caractère à chercher dans la chaine de mot
+DÉBUT
+initialiser f à -1
+POUR i:=0 À chaine:=\0 PAR PAS DE 1
+	SI chaine:= caractere ALORS
+	f:=i
+	Briser la boucle POUR
+retourner f
+FIN
+
+FONCTION main():0
+//i(entier):nombre à additionner
+//chaine(tableau de chaine de lettre): chaine de mot à analyser
+//caractere(tableau de lettre): caractère à chercher dans la chaine de mot
+DÉBUT
+Choisir les mots à analyser dans chaine
+
